@@ -1,1 +1,1 @@
-include ':screenviewpager'
+include ':screenviewpager', ':myapplication'

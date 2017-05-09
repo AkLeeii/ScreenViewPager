@@ -1,4 +1,4 @@
-package com.lch.screenviewpager.view;
+package com.lch.screenviewpager;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

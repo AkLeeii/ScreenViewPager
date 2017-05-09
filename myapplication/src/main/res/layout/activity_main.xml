@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        <com.lch.screenviewpager.view.ScreenViewPager
+        <com.lch.screenviewpager.ScreenViewPager
             android:id="@+id/viewpager"
             android:layout_width="0dp"
             android:layout_height="match_parent"
