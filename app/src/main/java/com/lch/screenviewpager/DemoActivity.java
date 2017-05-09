@@ -6,28 +6,43 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.SparseArray;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DemoActivity extends AppCompatActivity {
     private ViewPager viewPager;
+    private LinearLayout linearLayout;
     private List<Integer> pics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        //这里是为了让Viewpager左右两侧也可以滑动viewpager
+        linearLayout = (LinearLayout) findViewById(R.id.linearlayout);
+        linearLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return viewPager.dispatchTouchEvent(event);
+            }
+        });
+        //end
+        //viewpager的数据
         pics = new ArrayList<>();
         pics.add(R.mipmap.p1);
         pics.add(R.mipmap.p2);
         pics.add(R.mipmap.p3);
         pics.add(R.mipmap.p4);
         pics.add(R.mipmap.p5);
+        //end
+        //设置viewpager的适配器
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new PagerAdapter() {
             private SparseArray<ImageView> imageViews = new SparseArray<>();
 
@@ -61,5 +76,6 @@ public class DemoActivity extends AppCompatActivity {
                 imageViews.remove(position);
             }
         });
+        //end
     }
 }

@@ -18,6 +18,7 @@
         android:text="ScreenViewPager" />
 
     <LinearLayout
+        android:id="@+id/linearlayout"
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:clipChildren="false"><!--clipChildren="false" 必须-->
