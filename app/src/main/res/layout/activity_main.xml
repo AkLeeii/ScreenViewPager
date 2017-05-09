@@ -20,7 +20,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="240dp"
-        android:clipChildren="false">
+        android:clipChildren="false"><!--clipChildren="false" 必须-->
 
         <LinearLayout
             android:layout_width="0dp"
