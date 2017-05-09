@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ScreenViewPager.iml" filepath="$PROJECT_DIR$/ScreenViewPager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screenviewpager/app.iml" filepath="$PROJECT_DIR$/screenviewpager/app.iml" />
     </modules>
   </component>
 </project>
